@@ -3,11 +3,14 @@ package fr.steakmans.engineer;
 import com.mojang.logging.LogUtils;
 import fr.steakmans.engineer.common.blocks.ModBlocks;
 import fr.steakmans.engineer.common.blocks.blockentities.ModBlockEntities;
+import fr.steakmans.engineer.common.data.ElectricSavedData;
 import fr.steakmans.engineer.common.items.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -43,7 +46,6 @@ public class Main {
         ModBlocks.BLOCKS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
-
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
