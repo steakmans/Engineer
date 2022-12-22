@@ -1,5 +1,11 @@
 {
   "item.engineer.aluminum_ingot": "Lingot d'aluminium",
   "item.engineer.titanium_ingot": "Lingot de titane",
-  "item.engineer.silver_ingot": "Lingot d'argent"
+  "item.engineer.silver_ingot": "Lingot d'argent",
+  "block.engineer.titanium_ore": "Minerai de titane",
+  "block.engineer.titanium_deepslate_ore": "Minerai de titane des abysses",
+  "block.engineer.aluminum_ore": "Minerai d'aluminium",
+  "block.engineer.aluminum_deepslate_ore": "Minerai d'aluminium des abysses",
+  "block.engineer.silver_ore": "Minerai d'argent",
+  "block.engineer.silver_deepslate_ore": "Minerai d'argent des abysses"
 }

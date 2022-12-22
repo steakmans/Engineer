@@ -21,8 +21,13 @@ public class ModBlocks {
 
     //ores
     public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+    public static final RegistryObject<Block> TITANIUM_DEEPSLATE_ORE = BLOCKS.register("titanium_deepslate_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
     public static final RegistryObject<Block> ALUMINUM_ORE = BLOCKS.register("aluminum_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+    public static final RegistryObject<Block> ALUMINUM_DEEPSLATE_ORE = BLOCKS.register("aluminum_deepslate_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+
     public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+    public static final RegistryObject<Block> SILVER_DEEPSLATE_ORE = BLOCKS.register("silver_deepslate_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+
 
     //machines
     public static final RegistryObject<Block> TEST_MACHINE = BLOCKS.register("test_machine", () -> new BaseMachineBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));

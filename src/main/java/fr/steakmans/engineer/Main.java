@@ -3,12 +3,13 @@ package fr.steakmans.engineer;
 import com.mojang.logging.LogUtils;
 import fr.steakmans.engineer.common.blocks.ModBlocks;
 import fr.steakmans.engineer.common.blocks.blockentities.ModBlockEntities;
-import fr.steakmans.engineer.common.data.ElectricSavedData;
+import fr.steakmans.engineer.common.features.ModConfiguredFeatures;
+import fr.steakmans.engineer.common.features.ModPlacedFeartures;
 import fr.steakmans.engineer.common.items.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,7 +27,7 @@ public class Main {
     public static final CreativeModeTab TAB = new CreativeModeTab("engineering") {
         @Override
         public ItemStack makeIcon() {
-            return ModItems.ALUMINUM_INGOT.get().getDefaultInstance();
+            return ModItems.TITANIUM_INGOT.get().getDefaultInstance();
         }
     };
 
@@ -44,6 +45,8 @@ public class Main {
         ModItems.ITEMS.register(bus);
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
         ModBlocks.BLOCKS.register(bus);
+        ModConfiguredFeatures.CONFIGURED_FEATURES.register(bus);
+        ModPlacedFeartures.PLACED_FEATURES.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -53,6 +56,11 @@ public class Main {
     }
 
     private void clientSetup(FMLClientSetupEvent event) {
+
+    }
+
+    @SubscribeEvent
+    public void onWorldTick(TickEvent.LevelTickEvent event) {
 
     }
 

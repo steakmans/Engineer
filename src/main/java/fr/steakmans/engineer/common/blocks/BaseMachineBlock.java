@@ -2,7 +2,6 @@ package fr.steakmans.engineer.common.blocks;
 
 import fr.steakmans.engineer.common.blocks.blockentities.ModBlockEntities;
 import fr.steakmans.engineer.common.blocks.blockentities.TestMachineBlockEntity;
-import fr.steakmans.engineer.common.data.ElectricSavedData;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -17,19 +16,6 @@ public class BaseMachineBlock extends Block implements EntityBlock {
 
     public BaseMachineBlock(Properties p_49795_) {
         super(p_49795_);
-    }
-
-    @Override
-    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState state2, boolean p_60570_) {
-        super.onPlace(state, level, pos, state2, p_60570_);
-        if(!level.isClientSide) {
-            ElectricSavedData data = ElectricSavedData.get(level);
-            for (int i = 0; i <= data.map.size(); i++) {
-                if(!data.map.containsKey(i)) {
-
-                }
-            }
-        }
     }
 
     @Nullable

@@ -1,5 +1,11 @@
 {
   "item.engineer.aluminum_ingot": "Aluminum Ingot",
   "item.engineer.titanium_ingot": "Titanium ingot",
-  "item.engineer.silver_ingot": "Silver ingot"
+  "item.engineer.silver_ingot": "Silver ingot",
+  "block.engineer.titanium_ore": "Titanium ore",
+  "block.engineer.titanium_deepslate_ore": "Deepslate titanium ore",
+  "block.engineer.aluminum_ore": "Aluminum ore",
+  "block.engineer.aluminum_deepslate_ore": "Deepslate aluminum ore",
+  "block.engineer.silver_ore": "Silver ore",
+  "block.engineer.silver_deepslate_ore": "Deepslate silver ore"
 }
