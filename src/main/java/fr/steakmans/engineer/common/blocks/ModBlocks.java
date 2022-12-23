@@ -1,6 +1,7 @@
 package fr.steakmans.engineer.common.blocks;
 
 import fr.steakmans.engineer.Main;
+import fr.steakmans.engineer.common.util.CableUpgradeLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -34,8 +35,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHARGING_CHEST = BLOCKS.register("charging_chest", () -> new ChargingChestBlock());
 
     //cables
-    public static final RegistryObject<Block> TEST_CABLE = BLOCKS.register("test_cable", () -> new BaseCableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> BASE_CABLE = BLOCKS.register("base_cable", () -> new BaseCableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), CableUpgradeLevel.BASIC));
+    public static final RegistryObject<Block> CREATIVE_CABLE = BLOCKS.register("creative_cable", () -> new BaseCableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), CableUpgradeLevel.CREATIVE));
 
+    //power banks
+    public static final RegistryObject<Block> INFINITE_POWER_BANK = BLOCKS.register("infinite_power_bank", () -> new InfinitePowerBank());
 
     public static class Tags {
 

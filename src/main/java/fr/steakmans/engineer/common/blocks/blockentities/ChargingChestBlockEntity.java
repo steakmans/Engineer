@@ -22,7 +22,7 @@ public class ChargingChestBlockEntity extends EnergyInventoryBlockEntity {
     public static final Component TITLE = Component.translatable("container." + Main.MODID + ".charging_chest");
 
     public ChargingChestBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.CHARGING_CHEST_BLOCK_ENTITY.get(), pos, state, 18, 100000, 10000, 0);
+        super(ModBlockEntities.CHARGING_CHEST_BLOCK_ENTITY.get(), pos, state, 18, 36000, 1800, 0);
     }
 
     @Override

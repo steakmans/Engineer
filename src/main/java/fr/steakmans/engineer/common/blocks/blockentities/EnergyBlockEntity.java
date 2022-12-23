@@ -1,5 +1,6 @@
 package fr.steakmans.engineer.common.blocks.blockentities;
 
+import fr.steakmans.engineer.Main;
 import fr.steakmans.engineer.common.util.CustomEnergyStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -22,7 +23,7 @@ public class EnergyBlockEntity extends BlockEntity {
     public final CustomEnergyStorage storage;
     private LazyOptional<CustomEnergyStorage> energy;
 
-    private int capacity, maxRecieve, maxExtract;
+    public int capacity, maxRecieve, maxExtract;
     private int timer = 0;
     protected boolean requiresUpdate;
 
@@ -111,17 +112,14 @@ public class EnergyBlockEntity extends BlockEntity {
     }
 
     public void outputEnergy() {
-        if (this.storage.getEnergyStored() >= EnergyBlockEntity.this.maxExtract && EnergyBlockEntity.this.storage.canExtract()) {
+        if (this.storage.getEnergyStored() >= this.maxExtract && this.storage.canExtract()) {
             for (final var direction : Direction.values()) {
-                final BlockEntity be = EnergyBlockEntity.this.level.getBlockEntity(this.worldPosition.relative(direction));
+                final BlockEntity be = this.level.getBlockEntity(this.worldPosition.relative(direction));
                 if(be == null) continue;
-
                 be.getCapability(ForgeCapabilities.ENERGY, direction.getOpposite()).ifPresent(energyStorage -> {
-                    if(be != EnergyBlockEntity.this && storage.getEnergyStored() < getMaxEnergyStorable()) {
+                    if(be != EnergyBlockEntity.this && energyStorage.getEnergyStored() < energyStorage.getMaxEnergyStored()) {
                         final int toSend = EnergyBlockEntity.this.storage.extractEnergy(EnergyBlockEntity.this.maxExtract, false);
                         final int recieved = energyStorage.receiveEnergy(toSend, false);
-
-
                         this.storage.setEnergy(EnergyBlockEntity.this.getEnergyStored() + toSend - recieved);
                     }
                 });

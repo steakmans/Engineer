@@ -168,7 +168,7 @@ public class EnergyInventoryBlockEntity extends BlockEntity {
                 if(be == null) continue;
 
                 be.getCapability(ForgeCapabilities.ENERGY, direction.getOpposite()).ifPresent(energyStorage -> {
-                    if(be != EnergyInventoryBlockEntity.this && storage.getEnergyStored() < getMaxEnergyStorable()) {
+                    if(be != EnergyInventoryBlockEntity.this && energyStorage.getEnergyStored() < energyStorage.getMaxEnergyStored()) {
                         final int toSend = EnergyInventoryBlockEntity.this.storage.extractEnergy(EnergyInventoryBlockEntity.this.maxExtract, false);
                         final int recieved = energyStorage.receiveEnergy(toSend, false);
 

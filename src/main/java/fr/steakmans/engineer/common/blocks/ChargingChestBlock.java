@@ -25,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class ChargingChestBlock extends Block implements EntityBlock {
     public ChargingChestBlock() {
-        super(Properties.copy(Blocks.ENDER_CHEST));
+        super(Properties.copy(Blocks.ENDER_CHEST).lightLevel(light -> 0));
     }
 
     @Override

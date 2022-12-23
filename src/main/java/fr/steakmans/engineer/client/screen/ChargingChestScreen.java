@@ -48,10 +48,19 @@ public class ChargingChestScreen extends AbstractContainerScreen<ChargingChestCo
         font.draw(stack, playerInventoryTitle, this.leftPos + 8, this.topPos + 74, 0x404040);
         font.draw(stack, title, this.leftPos + 8, this.topPos + 5, 0x404040);
 
-        int currentEnergyStored = this.menu.data.get(0);
-        int maxEnergyStorable = this.menu.data.get(1);
+        final int currentEnergyStored = this.menu.data.get(0);
+        final int maxEnergyStorable = this.menu.data.get(1);
+        final int scaled = (int) mapNumber(currentEnergyStored, 0, maxEnergyStorable, 0, 160);
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
+        RenderSystem.setShaderTexture(0, TEXTURE);
+        blit(stack, this.leftPos + 8, this.topPos + 54, 0, 166, scaled, 17);
 
         this.renderTooltip(stack, mouseX, mouseY);
+    }
+
+    public static double mapNumber(double value, double rangeMin, double rangeMax, double resultMin, double resultMax) {
+        return (value - rangeMin) / (rangeMax - rangeMin) * (resultMax - resultMin) + resultMin;
     }
 
     @Override
