@@ -1,11 +1,14 @@
 package fr.steakmans.engineer;
 
 import com.mojang.logging.LogUtils;
+import fr.steakmans.engineer.client.screen.ChargingChestScreen;
 import fr.steakmans.engineer.common.blocks.ModBlocks;
 import fr.steakmans.engineer.common.blocks.blockentities.ModBlockEntities;
+import fr.steakmans.engineer.common.container.ModContainers;
 import fr.steakmans.engineer.common.features.ModConfiguredFeatures;
 import fr.steakmans.engineer.common.features.ModPlacedFeartures;
 import fr.steakmans.engineer.common.items.ModItems;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -47,6 +50,7 @@ public class Main {
         ModBlocks.BLOCKS.register(bus);
         ModConfiguredFeatures.CONFIGURED_FEATURES.register(bus);
         ModPlacedFeartures.PLACED_FEATURES.register(bus);
+        ModContainers.CONTAINERS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -56,7 +60,7 @@ public class Main {
     }
 
     private void clientSetup(FMLClientSetupEvent event) {
-
+        MenuScreens.register(ModContainers.CHARGING_CHEST_CONTAINER.get(), ChargingChestScreen::new);
     }
 
     @SubscribeEvent

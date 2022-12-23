@@ -27,7 +27,7 @@ public class ModItems {
     public static final RegistryObject<Item> SILVER_DEEPSLATE_ORE_ITEM = ITEMS.register("silver_deepslate_ore", () -> new BlockItem(ModBlocks.SILVER_DEEPSLATE_ORE.get(), new Item.Properties().tab(Main.TAB)));
     public static final RegistryObject<Item> ALUMINUM_ORE_ITEM = ITEMS.register("aluminum_ore", () -> new BlockItem(ModBlocks.ALUMINUM_ORE.get(), new Item.Properties().tab(Main.TAB)));
     public static final RegistryObject<Item> ALUMINUM_DEEPSLATE_ORE_ITEM = ITEMS.register("aluminum_deepslate_ore", () -> new BlockItem(ModBlocks.ALUMINUM_DEEPSLATE_ORE.get(), new Item.Properties().tab(Main.TAB)));
-
+    public static final RegistryObject<Item> CHARGING_CHEST_BLOCK_ITEM = ITEMS.register("charging_chest_block", () -> new BlockItem(ModBlocks.CHARGING_CHEST.get(), new Item.Properties().tab(Main.TAB)));
 
     //armor
 

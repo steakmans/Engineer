@@ -31,6 +31,7 @@ public class ModBlocks {
 
     //machines
     public static final RegistryObject<Block> TEST_MACHINE = BLOCKS.register("test_machine", () -> new BaseMachineBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final RegistryObject<Block> CHARGING_CHEST = BLOCKS.register("charging_chest", () -> new ChargingChestBlock());
 
     //cables
     public static final RegistryObject<Block> TEST_CABLE = BLOCKS.register("test_cable", () -> new BaseCableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));

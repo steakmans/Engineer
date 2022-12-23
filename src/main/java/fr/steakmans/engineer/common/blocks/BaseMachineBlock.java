@@ -21,12 +21,12 @@ public class BaseMachineBlock extends Block implements EntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return ModBlockEntities.TEST_MACHINE_BLOCKE_ENTITY.get().create(pos, state);
+        return ModBlockEntities.TEST_MACHINE_BLOCK_ENTITY.get().create(pos, state);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level p_153212_, BlockState p_153213_, BlockEntityType<T> type) {
-        return type == ModBlockEntities.TEST_MACHINE_BLOCKE_ENTITY.get() ? TestMachineBlockEntity::tick : null;
+        return type == ModBlockEntities.TEST_MACHINE_BLOCK_ENTITY.get() ? TestMachineBlockEntity::tick : null;
     }
 }
