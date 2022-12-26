@@ -1,0 +1,6 @@
+{
+	"parent": "engineer:block/cable_center",
+	"textures": {
+		"texture": "engineer:block/upgraded_cable_center"
+	}
+}

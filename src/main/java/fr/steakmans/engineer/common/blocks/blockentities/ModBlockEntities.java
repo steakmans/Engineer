@@ -18,8 +18,13 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<ChargingChestBlockEntity>> CHARGING_CHEST_BLOCK_ENTITY = BLOCK_ENTITIES.register("charging_chest_block_entity", () -> BlockEntityType.Builder.<ChargingChestBlockEntity>of(ChargingChestBlockEntity::new, ModBlocks.CHARGING_CHEST.get()).build(null));
 
     //cables
+    public static final RegistryObject<BlockEntityType<PrimitiveCableBlockEntity>> PRIMITIVE_CABLE_BLOC_ENTITY = BLOCK_ENTITIES.register("primitive_cable_block_entity", () -> BlockEntityType.Builder.<PrimitiveCableBlockEntity>of(PrimitiveCableBlockEntity::new, ModBlocks.PRIMITIVE_CABLE.get()).build(null));
     public static final RegistryObject<BlockEntityType<BaseCableBlockEntity>> BASE_CABLE_BLOC_ENTITY = BLOCK_ENTITIES.register("base_cable_block_entity", () -> BlockEntityType.Builder.<BaseCableBlockEntity>of(BaseCableBlockEntity::new, ModBlocks.BASE_CABLE.get()).build(null));
-    public static final RegistryObject<BlockEntityType<CreativeCableBlockEntity>> CREATIVE_CABLE_BLOC_ENTITY = BLOCK_ENTITIES.register("creative_cable_block_entity", () -> BlockEntityType.Builder.<CreativeCableBlockEntity>of(CreativeCableBlockEntity::new, ModBlocks.CREATIVE_CABLE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<UpgradedCableBlockEntity>> UPGRADED_CABLE_BLOC_ENTITY = BLOCK_ENTITIES.register("upgraded_cable_block_entity", () -> BlockEntityType.Builder.<UpgradedCableBlockEntity>of(UpgradedCableBlockEntity::new, ModBlocks.UPGRADED_CABLE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<AdvancedCableBlockEntity>> ADVANCED_CABLE_BLOC_ENTITY = BLOCK_ENTITIES.register("advanced_cable_block_entity", () -> BlockEntityType.Builder.<AdvancedCableBlockEntity>of(AdvancedCableBlockEntity::new, ModBlocks.ADVANCED_CABLE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<OverclockedCableBlockEntity>> OVERCLOCKED_CABLE_BLOC_ENTITY = BLOCK_ENTITIES.register("overclocked_cable_block_entity", () -> BlockEntityType.Builder.<OverclockedCableBlockEntity>of(OverclockedCableBlockEntity::new, ModBlocks.OVERCLOCKED_CABLE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<MaxCableBlockEntity>> MAX_CABLE_BLOC_ENTITY = BLOCK_ENTITIES.register("max_cable_block_entity", () -> BlockEntityType.Builder.<MaxCableBlockEntity>of(MaxCableBlockEntity::new, ModBlocks.MAX_CABLE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<CreativeCableBlockEntity>> INFINITE_CABLE_BLOC_ENTITY = BLOCK_ENTITIES.register("creative_cable_block_entity", () -> BlockEntityType.Builder.<CreativeCableBlockEntity>of(CreativeCableBlockEntity::new, ModBlocks.INFINITE_CABLE.get()).build(null));
 
 
     //power banks

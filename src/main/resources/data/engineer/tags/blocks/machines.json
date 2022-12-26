@@ -1,6 +1,8 @@
 {
   "replace": "false",
   "values": [
-    "engineer:test_machine"
+    "engineer:test_machine",
+    "engineer:infinite_power_bank",
+    "engineer:charging_chest"
   ]
 }

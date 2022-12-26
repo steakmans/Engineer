@@ -5,10 +5,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class CreativeCableBlockEntity extends CableBlockEntity{
-
-    public CreativeCableBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.INFINITE_CABLE_BLOC_ENTITY.get(), pos, state, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE / 6);
+public class AdvancedCableBlockEntity extends CableBlockEntity{
+    public AdvancedCableBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.ADVANCED_CABLE_BLOC_ENTITY.get(), pos, state, 2048 * 2, 2048, 2048);
     }
 
     @Override
@@ -17,7 +16,6 @@ public class CreativeCableBlockEntity extends CableBlockEntity{
     }
 
     public static <T extends BlockEntity> void tick(Level level, BlockPos pos, BlockState blockState, T t) {
-        if(level.getBlockEntity(pos) instanceof final CreativeCableBlockEntity be) be.tick();
+        if(level.getBlockEntity(pos) instanceof final AdvancedCableBlockEntity be) be.tick();
     }
-
 }

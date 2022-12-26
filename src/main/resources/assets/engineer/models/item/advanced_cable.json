@@ -1,0 +1,9 @@
+{
+  "parent": "engineer:block/advanced_cable_center",
+  "display": {
+    "gui": {
+      "scale": [1.25, 1.25, 1.25],
+      "rotation": [0, 35, 22.5]
+    }
+  }
+}

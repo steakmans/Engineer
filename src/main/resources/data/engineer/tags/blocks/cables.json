@@ -1,6 +1,12 @@
 {
   "replace": "false",
   "values": [
-    "engineer:test_cable"
+    "engineer:primitive_cable",
+    "engineer:base_cable",
+    "engineer:upgraded_cable",
+    "engineer:advanced_cable",
+    "engineer:overclocked_cable",
+    "engineer:max_cable",
+    "engineer:infinite_cable"
   ]
 }

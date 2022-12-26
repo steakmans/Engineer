@@ -6,9 +6,9 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class BaseCableBlockEntity extends EnergyBlockEntity{
+public class BaseCableBlockEntity extends CableBlockEntity{
     public BaseCableBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.BASE_CABLE_BLOC_ENTITY.get(), pos, state, 32 * 6, 32, 32);
+        super(ModBlockEntities.BASE_CABLE_BLOC_ENTITY.get(), pos, state, 128 * 2, 128, 128);
     }
 
     @Override

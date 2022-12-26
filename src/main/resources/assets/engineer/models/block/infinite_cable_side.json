@@ -1,0 +1,6 @@
+{
+	"parent": "engineer:block/cable_side",
+	"textures": {
+		"texture": "engineer:block/infinite_cable_side"
+	}
+}

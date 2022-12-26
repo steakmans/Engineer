@@ -11,7 +11,7 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 public class InfinitePowerBankBlockEntity extends EnergyBlockEntity{
     public InfinitePowerBankBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.INFINITE_POWER_BANK_BLOCK_ENTITY.get(), pos, state, 1000000, 0, 1000);
+        super(ModBlockEntities.INFINITE_POWER_BANK_BLOCK_ENTITY.get(), pos, state, Integer.MAX_VALUE, 0, Integer.MAX_VALUE);
     }
 
     @Override
